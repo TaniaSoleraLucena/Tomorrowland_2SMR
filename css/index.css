@@ -72,6 +72,11 @@ html {scroll-behavior: smooth;}
 
 /***************************** INTRO *******************************/
 
+#intro{background-image: url('../images/marco.png');
+       background-position: center;
+       background-repeat: no-repeat;
+}
+
 #texto-intro {
     padding-left: 5%;
     padding-right: 5%;
@@ -197,6 +202,13 @@ nav {
       text-align: left;
     }
   }
+
+
+/**************************** SEPARADOR **********************************/
+
+#linea {height: 100px;
+width: 1036px;
+}
 
 /***************************** CURIOSITIES *******************************/
 
