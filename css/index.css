@@ -38,6 +38,8 @@ video {
 section {padding:4% 0;} /* siempre voy a querer que el contenido de cualquier
                            sección quede separado del borde superior/inferior */
 
+html {scroll-behavior: smooth;}
+
 
 
 
@@ -85,59 +87,43 @@ section {padding:4% 0;} /* siempre voy a querer que el contenido de cualquier
     font-weight: bold;
 }
 /******* ARTISTS *********/
-.texto-derecha {
-    padding-left: 2%;
-    padding-right: 10%;
-    padding-top: 10%;
-    font-size: 1.3rem;
-    color: rgb(255, 255, 255);
-}
 
-.texto-izquierda {
-    padding-left: 10%;
-    padding-right: 40%;
-    padding-top: 25%;
-    font-size: 1.3rem;
-    color: rgb(255, 255, 255);
-}
-
-.artists-seccion {font-family: titulos;
-    font-size: 2.5rem;
-    color:rgb(0, 255, 234);
+.titulo-artist {font-family: titulos;
+    font-size: 3.5rem;
+    color:rgb(0, 255, 213);
     text-align:center;
     padding-bottom:4%;
     font-weight: bold;
 }
 
-#alan_walker {
-    float:left; /* para que la imagen tenga el texto alrededor */
-    padding-left: 10%;
-    margin-right: 60px;
-    width:30%;
+#artists {background-color: rgb(0, 0, 0);
+        color:white;
 }
 
-#martin_garrix {
-    float:right; /* para que la imagen tenga el texto alrededor */
-    padding-left: 50%;
-    padding-top: 10%;
-    margin-right: 20px;
-    width:40%;
+/* vamos a montar un grid en dos columnas al 50%  */
+/* necesito primero un contenedor grid : */
+
+#grid4 { display:grid;
+         grid-template-columns: 50% 50%; }
+
+/* selecciono las imágenes DENTRO de una columna y les aplico el 100%
+   que es el ancho total de la columna */
+
+.col4 img {width:70%;
+           padding-left: 15%;}
+
+.col-texto-derecha {padding:20%;}
+
+.col-texto-izquierda {padding:20%;}
+
+.col-texto li {margin-bottom: 20px;}
+
+a:hover{color: aqua;
+  text-decoration: none;
 }
 
-#steve_aoki {
-    float:left; /* para que la imagen tenga el texto alrededor */
-    padding-left: 10%;
-    margin-right: 60px;
-    width:35%;
-}
-
-#marshmello {
-    float:right; /* para que la imagen tenga el texto alrededor */
-    padding-left: 50%;
-    padding-top: 10%;
-    margin-right: 20px;
-    width:40%;
-}
+a {color:#ff008c;
+text-decoration: none;}
 
 /********** ESTILO DE NAV (W3SHOOLS) ********************/
 
@@ -225,22 +211,23 @@ nav {
 #curiosity p {font-size: 1.5em;
             text-align: center;
             padding-right:6%;
-            color:#ffffff
+            color:#ffffff;
+            padding-top: 1.7%;
           }
 
-#smoke {width: 60%;
+#stage {width: 60%;
     float: left;
-    margin: 5%;}
+    margin: 5%;
+  }
 
 
 
 /***************************** FOOTER ***********************************************/
 
 footer {background-color: #000000;
-        color:#ffffff;
-        margin-top: 5%;
+        color:white;
 }
-.footer {display:grid; /* distribuir en columnas */
+.grid3 {display:grid; /* distribuir en columnas */
         grid-template-columns: 25% 25% 50%;}
 .col3 {padding: 6%;}
 
@@ -251,7 +238,8 @@ footer {background-color: #000000;
 #ancha {padding:3%;}
 
 .fa {box-sizing: content-box; /* no mr cuentes el padding dentro */
-    font-size: 10px;
+    padding: 10px;
+    font-size: 20px;
     width: 20px;
     height: 20px;
     border-radius: 20%;
@@ -290,10 +278,30 @@ footer {background-color: #000000;
     font-weight: bold;
   }
 
-  .enlace:hover {color:#f71eda}
+  .enlace:hover {color:#ff008c}
 
-  .footer .copyright {margin-top: 10%;
-    text-align: center;
-    font-size: 13px;
-    color: rgb(255, 0, 191);}
+  /**************     MEDIA QUERIES ****************************************/
 
+@media only screen and (width<=1000px){    /**** para tablet **********/
+  #wrapper {width:90%;}
+  #titulo {font-size:2rem;
+           width:45%;}
+  #grid4 {grid-template-columns: auto;} /* el grid de 4 pasa a 2 col en tablet */
+  #grid3 {grid-template-columns:auto;}
+  #ancha {display:inline-block;
+         margin: auto;}
+  #curiosity {width: 100%}
+  .curiosity-section {width: 100%;
+    font-size: 2rem;}
+
+}
+
+@media only screen and (width<=600px){  /****** para móvil ************/
+  #wrapper {width:100%;}
+  #grid4 {grid-template-columns: auto;} /* el grid de 4 pasa a 1 col en movil */
+  #grid3 {grid-template-columns: auto;}
+  #curiosity {width: 100%}
+  .curiosity-section {width: 100%;
+                      font-size: 2rem;}
+
+}

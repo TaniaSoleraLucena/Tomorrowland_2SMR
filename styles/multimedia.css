@@ -1,4 +1,4 @@
-/******estilo para la web de artistas favoritos**********/
+/******estilo de galeria de tomorrowland**********/
 
 
 /****** Estilo general***********/
@@ -26,22 +26,26 @@
             margin:auto;}
     
     html {scroll-behavior: smooth;}
-    
-    /********estilo para nav*******/
 
+    /********Estilo de la hero section*********/
+    #hero {background-image: url(../images/hero_multi.jpg);
+      background-size: cover;
+      background-position: 66%;
+      position: relative;
+      height: 90vh; /*****100vh es el alto de la ventana del dispositivo*****/
+      margin-top: 0.01px;
+} 
     
+  /*********** GALERIA IMAGENES ************/
     
-    
-    
-  
- 
-    
-    #hero h1{position: absolute;
-            top: 30px;
-            left: 50px;
-            font-size: 2.3em;
-            font-family: west1;
-            color: rgb(255, 0, 0);}
+  #titulo-1 {font-family: titulos;
+    font-size: 4rem;
+    color:rgb(204, 0, 255);
+    text-align:center;
+    padding-bottom:4%;
+    padding-top: 10%;
+    font-weight: bold;
+}
     
             
     
@@ -50,10 +54,10 @@
 /*****ESTILO DE LA IMAGES******/
 #IMAGES{margin-bottom: 90px;}
 
-#IMAGES h1{font-family: titulos;
+#IMAGES h1{font-family: west2;
     text-align: center;
     font-size: 3.2em;
-    color: rgb(0, 238, 255);
+    color: white;
     padding-top: 80px;}
 
 
@@ -66,39 +70,40 @@
 
 
 
+
 /******ESTILO VIDEOS**********/
-.container {
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-      padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
-    }
-    
-    /* Then style the iframe to fit in the container div with full height and width */
-    .responsive-iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-      padding:5%; /***** para que no se pegue al borde de su contenido */
-    }
 
-.mitad {width: 50%;/****esto limita el ancho al 50%****/
-        float: left;/**Y esto hace que se monten en paralelo***/
-        box-sizing: border-box;/*****Para que cuente el width******/
-        margin-bottom: 90px;}
+#titulo-2 {font-family: titulos;
+  font-size: 4rem;
+  color:rgb(0, 255, 221);
+  text-align:center;
+  padding-top: 40%;
+  font-weight: bold;
+}
 
+.grid3-iguales { display:grid;
+  grid-template-columns: auto auto auto;
+}
 
-#VIDEOS h1{font-family: titulos;
-    padding-top: 50%;   
-    text-align: center;
-    font-size: 3.2em;
-    color: rgb(255, 0, 221);}
+.col3-iguales {padding:3%;}
 
+.container-16-9 {
+position: relative;
+overflow: hidden;
+width: 100%;
+padding-top: 10%;
+}
 
+/* Then style the iframe to fit in the container div with full height and width */
+.responsive-iframe {
+position: absolute;
+top: 0;
+left: 0;
+bottom: 0;
+right: 0;
+width: 100%;
+height: 100%;
+}
 
 
     
@@ -122,7 +127,7 @@ nav {
   .topnav a {
     float: left;
     display: block;
-    color: #f2f2f2;
+    color: #ffffff;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -178,64 +183,60 @@ nav {
 /******FOOTERS**********/
 
 footer {background-color: #000000;
-    color:#ffffff
+        color:white;
 }
-.footer {display:grid; /* distribuir en columnas */
-    grid-template-columns: 25% 25% 50%;}
+.grid3 {display:grid; /* distribuir en columnas */
+        grid-template-columns: 25% 25% 50%;}
 .col3 {padding: 6%;}
 
 .col3 img {width: 50%; /* ponte al 50% del cuadro al que estas metida no te salgas de tu cuadro */
-      display: block; /* la convierto en bloque */
-      margin: auto;}  /* la centro dentro de la columnna */
+          display: block; /* la convierto en bloque */
+          margin: auto;}  /* la centro dentro de la columnna */
 
 #ancha {padding:3%;}
 
 .fa {box-sizing: content-box; /* no mr cuentes el padding dentro */
-font-size: 10px;
-width: 20px;
-height: 20px;
-border-radius: 20%;
-text-align: center;
-text-decoration: none;
-margin: 5px 2px;
-}
+    padding: 10px;
+    font-size: 20px;
+    width: 20px;
+    height: 20px;
+    border-radius: 20%;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+  }
+  
+  .fa:hover {
+      opacity: 0.7;
+  }
 
-.fa:hover {
-  opacity: 0.7;
-}
+  .fa-facebook {
+    background: #3B5998;
+    color: white;
+  }
+  
+  .fa-twitter {
+    background: #55ACEE;
+    color: white;
+  }
 
-.fa-facebook {
-background: #3B5998;
-color: white;
-}
+  .fa-youtube {
+    background: #bb0000;
+    color: white;
+  }
+  
+  .fa-instagram {
+    background: #125688;
+    color: white;
+  }
 
-.fa-twitter {
-background: #55ACEE;
-color: white;
-}
+  .enlace {
+    text-decoration: none;
+    color:#ffffff;
+    font-weight: bold;
+  }
 
-.fa-youtube {
-background: #bb0000;
-color: white;
-}
-
-.fa-instagram {
-background: #125688;
-color: white;
-}
-
-.enlace {
-text-decoration: none;
-color:#ffffff;
-font-weight: bold;
-}
-
-.enlace:hover {color:#f71eda}
-
-.footer .copyright {margin-top: 15px;
-text-align: center;
-font-size: 13px;
-color: rgb(255, 0, 191);}
+  .enlace:hover {color:#ff008c}
     
     
     
@@ -244,6 +245,7 @@ color: rgb(255, 0, 191);}
             .cuartos{width: 100%;
                     padding-right: 80px;}
                 .mitad{width: 90%;}
+                #hero {width: 100%;}
     
             
     }
@@ -252,8 +254,9 @@ color: rgb(255, 0, 191);}
     
     @media only screen and (max-width:600px) {
             #container {width: 100%;}
-            .cuartos {width: 70%;
+            .cuartos {width: 80%;
                     margin: 20%;}
+            #hero {width: 100%;}
     
     }
     
