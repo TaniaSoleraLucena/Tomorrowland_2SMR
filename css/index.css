@@ -10,7 +10,12 @@
 
 
 @font-face { font-family: titulos;
-            src: url(../fonts/Line\ Of\ Thinking\ Demo.otf);
+            src: url(../fonts/NeonRetro-DemoVersion-Regular.otf);
+}
+
+@font-face {
+  font-family: texto;
+  src: url(../fonts/Line\ Of\ Thinking\ Demo.otf);
 }
 
 body {
@@ -57,7 +62,7 @@ html {scroll-behavior: smooth;}
 #titulo {
     font-family: titulos;
     background-color: rgb(252, 251, 255, 0.25);
-    font-size: 5rem;
+    font-size: 4rem;
     width: 50%;
     text-align: center;
     position: absolute; /* el titulo se fija DENTRO del hero */
@@ -66,7 +71,7 @@ html {scroll-behavior: smooth;}
     transform: translate(-50%, -50%);
     backdrop-filter: blur(5px);
     color: azure;
-    font-weight: bold;
+    
 
 }
 
@@ -89,7 +94,6 @@ html {scroll-behavior: smooth;}
     color:rgb(204, 0, 255);
     text-align:center;
     padding-bottom:4%;
-    font-weight: bold;
 }
 /******* ARTISTS *********/
 
@@ -217,7 +221,6 @@ width: 1036px;
   color: rgb(204, 0, 255);
   text-align:center;
   padding-bottom:2%;
-  font-weight: bold;
 }
 
 #curiosity p {font-size: 1.5em;
